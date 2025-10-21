@@ -1,0 +1,10 @@
+# Ignore environment variables file
+.env
+
+# Ignore Python virtual environment directories
+venv/
+env/
+.venv/
+ENV/
+VENV/
+VLanggraph/
