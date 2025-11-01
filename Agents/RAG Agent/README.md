@@ -54,12 +54,8 @@ User Query → LLM Agent → Should Continue? → Retriever Tool → Vector Sear
 ```bash
 # Create .env file with your OpenAI API key
 OPENAI_API_KEY=your_api_key_here
-```
-
-2. **Document Preparation**
-Place your PDF document at:
-```
-C:/Users/peter/OneDrive/Desktop/ROS_ROBOTIC/Ros_Rover/Control_Interface_hardware.pdf
+PDF_PATH=your_pdf_path_here
+COLLECTION_NAME=your_collection_name_here
 ```
 
 ### Running the Agent
@@ -113,7 +109,7 @@ embedding_model = "text-embedding-3-small"
 ### Storage Configuration
 ```python
 persist_directory = "./chroma_db"
-collection_name = "ROS2_Control_Interface"
+collection_name = os.getenv("COLLECTION_NAME")
 ```
 
 ## 📁 File Structure

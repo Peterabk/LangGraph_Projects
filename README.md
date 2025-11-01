@@ -127,6 +127,17 @@ Collaborative document creation and editing assistant.
 - Interactive editing workflow
 - Automatic file persistence
 
+#### 4. **RAG Agent** (`Agents/RAG_Agent/`)
+Advanced Retrieval-Augmented Generation agent for document-based question answering.
+
+**Key Capabilities:**
+- PDF document processing and vector storage
+- Semantic search with ChromaDB
+- Intelligent document retrieval
+- Context-aware responses with citations
+
+*For detailed documentation, setup instructions, and technical implementation details, see the README.md file in the `Agents/` folder.*
+
 ## 🛠️ Technical Stack
 
 - **LangGraph**: Graph-based AI application framework
@@ -173,7 +184,7 @@ OPENAI_API_KEY=your_api_key_here
 ```bash
 python Sequential_Graph.py
 python Agents/ChatBot.py
-python Agents/React\ Agent/React_Agent.py
+python Agents/React_Agent/React_Agent.py
 ```
 
 ## 📁 Project Structure
@@ -251,15 +262,3 @@ tools = [my_tool]
 model = ChatOpenAI().bind_tools(tools)
 tool_node = ToolNode(tools)
 ```
-
-## 🤝 Contributing
-
-This is a learning repository. Feel free to:
-- Add new graph patterns
-- Implement additional agent types
-- Improve existing examples
-- Add documentation and comments
-
-## 📄 License
-
-This project is for educational purposes. Please check individual dependencies for their respective licenses.
